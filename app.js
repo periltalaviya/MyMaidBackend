@@ -10,7 +10,7 @@ const multer = require('multer');
 const path = require('path');
 const DIR = './uploads';
 
-var port = 3500;
+var port = process.env.PORT || 3500;
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
