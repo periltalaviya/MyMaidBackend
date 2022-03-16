@@ -1,17 +1,8 @@
 const Pool = require('pg').Pool;
+const connectionString = 'postgres://igctkilhwycflm:7fdd13c3e6d018754c9d6ad444da4bfc2ac5a8d94cf1c49c598816b3901c9849@ec2-54-158-26-89.compute-1.amazonaws.com:5432/d7p1jgb443mnch';
 const pool = new Pool({
-    user: 'igctkilhwycflm',
-    host: 'ec2-54-158-26-89.compute-1.amazonaws.com',
-    database: 'd7p1jgb443mnch',
-    password: '7fdd13c3e6d018754c9d6ad444da4bfc2ac5a8d94cf1c49c598816b3901c9849',
-    port: 5432,
-    ssl: true,
-    dialect: 'postgres',
-    dialectOptions: {
-        ssl: {
-            rejectUnauthorized: false
-        }
-    }
+    connectionString: connectionString,
+    ssl: { rejectUnauthorized: false }
 })
 
 // Admin
