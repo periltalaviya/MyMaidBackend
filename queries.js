@@ -183,7 +183,7 @@ const getMaidLogin = (request, response) => {
         if (error) {
             throw error;
         }
-       
+
         if (result.rows == "") {
             response.send({ status: 201, msg: 'No Data found' });
         } else {
@@ -378,7 +378,7 @@ const getClientLogin = (request, response) => {
         if (error) {
             throw error;
         }
-       
+
         if (result.rows == "") {
             response.send({ status: 201, msg: 'No Data found' });
         } else {

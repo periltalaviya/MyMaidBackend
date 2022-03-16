@@ -34,6 +34,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 
+NODE_TLS_REJECT_UNAUTHORIZED='0';
+NODE_EXTRA_CA_CERTS="./cert.pem";
+
 //mail
 var transporter = nodemailer.createTransport({
   service: 'gmail',
